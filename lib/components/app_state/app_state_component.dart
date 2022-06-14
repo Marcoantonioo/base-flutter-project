@@ -1,4 +1,5 @@
 import 'package:base_flutter_project/app_injector.dart';
+import 'package:base_flutter_project/architecture/utils/app_theme.dart';
 import 'package:base_flutter_project/components/app_state/event/app_state_component_event.dart';
 import 'package:base_flutter_project/components/app_state/binding/app_state_component_binding.dart';
 import 'package:base_flutter_project/components/app_state/controller/app_state_component_controller.dart';
@@ -17,7 +18,7 @@ class AppStateComponent extends State<MyApp> with WidgetsBindingObserver {
   late AppStateComponentController _controller;
   @override
   void initState() {
-    WidgetsBinding.instance?.addObserver(this);
+    WidgetsBinding.instance.addObserver(this);
     _controller = Get.find();
     Intl.defaultLocale = 'pt-BR';
     super.initState();
@@ -25,7 +26,7 @@ class AppStateComponent extends State<MyApp> with WidgetsBindingObserver {
 
   @override
   void dispose() {
-    WidgetsBinding.instance?.removeObserver(this);
+    WidgetsBinding.instance.removeObserver(this);
     super.dispose();
   }
 
@@ -38,9 +39,7 @@ class AppStateComponent extends State<MyApp> with WidgetsBindingObserver {
   Widget build(BuildContext context) {
     return GetMaterialApp(
       title: 'Base App',
-      theme: ThemeData(
-        primarySwatch: Colors.blue,
-      ),
+      theme: AppThemeData.darkThemeData,
       initialBinding: AppInjector(),
       debugShowCheckedModeBanner: false,
       getPages: routes,

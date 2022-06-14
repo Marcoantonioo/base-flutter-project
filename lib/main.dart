@@ -1,9 +1,18 @@
+import 'dart:async';
+import 'dart:developer';
+
 import 'package:base_flutter_project/components/app_state/app_state_component.dart';
 import 'package:flutter/material.dart';
 
 void main() {
   WidgetsFlutterBinding.ensureInitialized();
-  runApp(const MyApp());
+
+  return runZonedGuarded(() async {
+    runApp(const MyApp());
+  }, (error, stack) {
+    log(stack.toString());
+    log(error.toString());
+  });
 }
 
 class MyApp extends StatefulWidget {
