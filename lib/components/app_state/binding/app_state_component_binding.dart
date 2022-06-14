@@ -6,6 +6,9 @@ import 'package:base_flutter_project/core/auth_session/auth_session_impl.dart';
 import 'package:base_flutter_project/core/auth_session/mapper/session_mapper.dart';
 import 'package:base_flutter_project/core/connector/connector.dart';
 import 'package:base_flutter_project/core/connector/connector_impl.dart';
+import 'package:base_flutter_project/core/http/http_client.dart';
+import 'package:base_flutter_project/core/http/http_client_impl.dart';
+import 'package:dio/dio.dart';
 
 class AppStateComponentBinding extends Injector {
   @override
@@ -13,6 +16,8 @@ class AppStateComponentBinding extends Injector {
     put(SessionMapper(), permanent: true);
     put<AuthSession>(AuthSessionImpl(mapper: find()), permanent: true);
     put<Connector>(ConnectorImpl(authSession: find()), permanent: true);
+    put<HttpClient>(HttpClientImpl(dio: Dio(), authSession: find()),
+        permanent: true);
     put(AppStateComponentProvider(), permanent: true);
     put(AppStateComponentController(appStateComponentProvider: find()),
         permanent: true);

@@ -5,7 +5,7 @@ import 'package:base_flutter_project/presentation/screens/login/login_provider.d
 class LoginInjector extends Injector {
   @override
   void dependencies() {
-    put(LoginProvider());
+    put(LoginProvider(httpClient: find()));
     put(LoginController(loginProvider: find()));
   }
 }
