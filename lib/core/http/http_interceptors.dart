@@ -43,17 +43,29 @@ class HttpInterceptor extends InterceptorsWrapper {
   }
 
   @override
-  void onResponse(Response response, ResponseInterceptorHandler handler) async {
+  void onResponse(Response response, ResponseInterceptorHandler handler) {
     final statusCode = response.statusCode;
     final uri = response.requestOptions.uri;
     final data = jsonEncode(response.data);
     log("✅ RESPONSE[$statusCode] => PATH: $uri\n DATA: $data");
-    if (response.statusCode == 401) {
+  }
+
+  @override
+  void onError(DioError err, ErrorInterceptorHandler handler) async {
+    final statusCode = err.response?.statusCode;
+    final uri = err.requestOptions.path;
+    var data = "";
+    try {
+      data = jsonEncode(err.response?.data);
+    } catch (e) {}
+    if (err.response?.statusCode == 401) {
       final LoginProvider loginProvider = Get.find();
       final newToken = await loginProvider.refreshToken();
       await _authSession.save(SessionModel(token: newToken));
-      await _retry(response.requestOptions);
+      await _retry(err.response!.requestOptions);
     }
+    log("⚠️ ERROR[$statusCode] => PATH: $uri\n DATA: $data");
+    super.onError(err, handler);
   }
 
   Future<Response<dynamic>> _retry(RequestOptions requestOptions) async {
@@ -67,17 +79,5 @@ class HttpInterceptor extends InterceptorsWrapper {
       queryParameters: requestOptions.queryParameters,
       options: options,
     );
-  }
-
-  @override
-  void onError(DioError err, ErrorInterceptorHandler handler) {
-    final statusCode = err.response?.statusCode;
-    final uri = err.requestOptions.path;
-    var data = "";
-    try {
-      data = jsonEncode(err.response?.data);
-    } catch (e) {}
-    log("⚠️ ERROR[$statusCode] => PATH: $uri\n DATA: $data");
-    super.onError(err, handler);
   }
 }
