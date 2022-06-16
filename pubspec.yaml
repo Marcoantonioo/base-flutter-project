@@ -33,6 +33,9 @@ dependencies:
   shared_preferences: ^2.0.6
   google_fonts: ^3.0.1
   dio: ^4.0.6
+  device_info_plus: ^3.2.4
+  advertising_id: ^2.3.0
+  unique_identifier: ^0.2.2
   flutter:
     sdk: flutter
 

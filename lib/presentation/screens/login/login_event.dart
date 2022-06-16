@@ -8,3 +8,10 @@ class DoLogin extends LoginEvent {
   @override
   String toString() => 'Login Event';
 }
+
+class GetDeviceInfo extends LoginEvent {
+  GetDeviceInfo();
+
+  @override
+  String toString() => 'GetDeviceInfo';
+}

@@ -43,6 +43,12 @@ abstract class BaseController<Event> extends GetxController
 
   bool isStateIdle() => _state.value == State.idle;
 
+  void setStateLoading() => _state(State.loading);
+
+  void setStateIdle() => _state(State.idle);
+
+  void setStateError() => _state(State.error);
+
   @protected
   void handleEvents(Event? event);
 
