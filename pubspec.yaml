@@ -82,6 +82,11 @@ flutter:
   # list giving the asset and other descriptors for the font. For
   # example:
   fonts:
+    - family: Gilroy
+      fonts:
+        - asset: assets/fonts/Gilroy-Light.otf
+        - asset: assets/fonts/Gilroy-ExtraBold.otf
+          weight: 700
     - family: ProductSans
       fonts:
         - asset: assets/fonts/Product-Sans-Regular.ttf

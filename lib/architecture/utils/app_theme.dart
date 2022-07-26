@@ -8,14 +8,16 @@ class AppThemeData {
   static final Color _lightFocusColor = Colors.black.withOpacity(0.12);
   static final Color _darkFocusColor = Colors.white.withOpacity(0.12);
 
-  static ThemeData lightThemeData =
-      themeData(lightColorScheme, _lightFocusColor);
+  static ThemeData lightThemeData = themeData(
+    lightColorScheme,
+    _lightFocusColor,
+  );
   static ThemeData darkThemeData = themeData(darkColorScheme, _darkFocusColor);
 
   static ThemeData themeData(ColorScheme colorScheme, Color focusColor) {
     return ThemeData(
       colorScheme: colorScheme,
-      textTheme: _textTheme,
+      textTheme: textTheme,
       // Matches manifest.json colors and background color.
       primaryColor: const Color(0xFF0E3E90),
       appBarTheme: AppBarTheme(
@@ -45,14 +47,15 @@ class AppThemeData {
           _lightFillColor.withOpacity(0.80),
           _darkFillColor,
         ),
-        contentTextStyle: _textTheme.subtitle1!.apply(color: _darkFillColor),
+        contentTextStyle: textTheme.subtitle1!.apply(color: _darkFillColor),
       ),
+      fontFamily: 'Gilroy',
     );
   }
 
   static const ColorScheme lightColorScheme = ColorScheme(
-    primary: Color(0xFFd21e1d),
-    primaryContainer: Color(0xFFd21e1d),
+    primary: Color(0xFF0E3E90),
+    primaryContainer: Color(0xFF0E3E90),
     secondary: Color(0xFF259AE0),
     secondaryContainer: Color(0xFF259AE0),
     background: Color(0xffFCFCFC),
@@ -88,16 +91,16 @@ class AppThemeData {
   static const _semiBold = FontWeight.w600;
   static const _bold = FontWeight.w700;
 
-  static final TextTheme _textTheme = TextTheme(
-    headline4: GoogleFonts.montserrat(fontWeight: _bold, fontSize: 20.0),
-    caption: GoogleFonts.oswald(fontWeight: _semiBold, fontSize: 16.0),
-    headline5: GoogleFonts.oswald(fontWeight: _medium, fontSize: 16.0),
-    subtitle1: GoogleFonts.montserrat(fontWeight: _medium, fontSize: 16.0),
-    overline: GoogleFonts.montserrat(fontWeight: _medium, fontSize: 12.0),
-    bodyText1: GoogleFonts.montserrat(fontWeight: _regular, fontSize: 14.0),
-    subtitle2: GoogleFonts.montserrat(fontWeight: _medium, fontSize: 14.0),
-    bodyText2: GoogleFonts.montserrat(fontWeight: _regular, fontSize: 16.0),
-    headline6: GoogleFonts.montserrat(fontWeight: _bold, fontSize: 16.0),
-    button: GoogleFonts.montserrat(fontWeight: _semiBold, fontSize: 14.0),
+  static const TextTheme textTheme = TextTheme(
+    headline4: TextStyle(fontWeight: _bold, fontSize: 24.0),
+    caption: TextStyle(fontWeight: _semiBold, fontSize: 16.0),
+    headline5: TextStyle(fontWeight: _medium, fontSize: 16.0),
+    subtitle1: TextStyle(fontWeight: _medium, fontSize: 16.0),
+    overline: TextStyle(fontWeight: _medium, fontSize: 12.0),
+    bodyText1: TextStyle(fontWeight: _regular, fontSize: 14.0),
+    subtitle2: TextStyle(fontWeight: _medium, fontSize: 14.0),
+    bodyText2: TextStyle(fontWeight: _regular, fontSize: 16.0),
+    headline6: TextStyle(fontWeight: _bold, fontSize: 16.0),
+    button: TextStyle(fontWeight: _semiBold, fontSize: 14.0),
   );
 }
