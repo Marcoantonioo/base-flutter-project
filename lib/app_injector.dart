@@ -1,7 +1,7 @@
-import 'package:base_flutter_project/architecture/architecture_di.dart';
-import 'package:base_flutter_project/architecture/injection/injector.dart';
-import 'package:base_flutter_project/components/components_di.dart';
-import 'package:base_flutter_project/core/core_di.dart';
+import 'package:cebras_app/architecture/architecture_di.dart';
+import 'package:cebras_app/architecture/injection/injector.dart';
+import 'package:cebras_app/components/components_di.dart';
+import 'package:cebras_app/core/core_di.dart';
 
 class AppInjector extends Injector {
   @override

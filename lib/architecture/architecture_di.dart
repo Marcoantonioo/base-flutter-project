@@ -1,6 +1,6 @@
-import 'package:base_flutter_project/architecture/device_info/device_info.dart';
-import 'package:base_flutter_project/architecture/device_info/device_info_impl.dart';
-import 'package:base_flutter_project/architecture/injection/injector.dart';
+import 'package:cebras_app/architecture/device_info/device_info.dart';
+import 'package:cebras_app/architecture/device_info/device_info_impl.dart';
+import 'package:cebras_app/architecture/injection/injector.dart';
 
 class ArchitectureInjector extends Injector {
   @override

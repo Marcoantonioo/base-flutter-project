@@ -2,8 +2,8 @@ import 'dart:developer';
 import 'dart:io';
 
 import 'package:advertising_id/advertising_id.dart';
-import 'package:base_flutter_project/architecture/device_info/device_info.dart';
-import 'package:base_flutter_project/architecture/device_info/model/device_info_model.dart';
+import 'package:cebras_app/architecture/device_info/device_info.dart';
+import 'package:cebras_app/architecture/device_info/model/device_info_model.dart';
 import 'package:device_info_plus/device_info_plus.dart';
 import 'package:flutter/services.dart';
 import 'package:unique_identifier/unique_identifier.dart';

@@ -1,4 +1,4 @@
-package com.example.base_flutter_project
+package com.example.cebras
 
 import io.flutter.embedding.android.FlutterActivity
 

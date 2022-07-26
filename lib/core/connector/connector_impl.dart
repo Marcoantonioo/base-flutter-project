@@ -1,7 +1,7 @@
 import 'dart:developer';
-import 'package:base_flutter_project/architecture/utils/constants.dart';
-import 'package:base_flutter_project/core/auth_session/auth_session.dart';
-import 'package:base_flutter_project/core/connector/connector.dart';
+import 'package:cebras_app/architecture/utils/constants.dart';
+import 'package:cebras_app/core/auth_session/auth_session.dart';
+import 'package:cebras_app/core/connector/connector.dart';
 import 'package:get/get.dart';
 
 class ConnectorImpl extends Connector {

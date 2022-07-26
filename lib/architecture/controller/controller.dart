@@ -1,6 +1,6 @@
-import 'package:base_flutter_project/architecture/controller/mixin/message_mixin.dart';
-import 'package:base_flutter_project/architecture/controller/mixin/navigator_mixin.dart';
-import 'package:base_flutter_project/architecture/exception/remote_exception.dart';
+import 'package:cebras_app/architecture/controller/mixin/message_mixin.dart';
+import 'package:cebras_app/architecture/controller/mixin/navigator_mixin.dart';
+import 'package:cebras_app/architecture/exception/remote_exception.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:get/get.dart';
 

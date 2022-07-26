@@ -1,4 +1,4 @@
-com.example.base_flutter_project
+com.example.cebras
 attr activityAction
 attr activityName
 attr alpha

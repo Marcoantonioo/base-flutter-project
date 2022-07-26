@@ -1,6 +1,6 @@
-import 'package:base_flutter_project/architecture/exception/remote_exception.dart';
-import 'package:base_flutter_project/core/http/http_client.dart';
-import 'package:base_flutter_project/presentation/screens/login/model/credential_model.dart';
+import 'package:cebras_app/architecture/exception/remote_exception.dart';
+import 'package:cebras_app/core/http/http_client.dart';
+import 'package:cebras_app/presentation/screens/login/model/credential_model.dart';
 
 class LoginProvider {
   final HttpClient _httpClient;

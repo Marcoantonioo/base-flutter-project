@@ -4,7 +4,7 @@
     "type": "APK",
     "kind": "Directory"
   },
-  "applicationId": "com.example.base_flutter_project",
+  "applicationId": "com.example.cebras",
   "variantName": "processDebugResources",
   "elements": [
     {

@@ -1,7 +1,7 @@
-import 'package:base_flutter_project/architecture/utils/constants.dart';
-import 'package:base_flutter_project/core/auth_session/auth_session.dart';
-import 'package:base_flutter_project/core/http/http_client.dart';
-import 'package:base_flutter_project/core/http/http_interceptors.dart';
+import 'package:cebras_app/architecture/utils/constants.dart';
+import 'package:cebras_app/core/auth_session/auth_session.dart';
+import 'package:cebras_app/core/http/http_client.dart';
+import 'package:cebras_app/core/http/http_interceptors.dart';
 import 'package:dio/dio.dart';
 
 class HttpClientImpl implements HttpClient {

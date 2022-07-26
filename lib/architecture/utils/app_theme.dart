@@ -17,17 +17,28 @@ class AppThemeData {
       colorScheme: colorScheme,
       textTheme: _textTheme,
       // Matches manifest.json colors and background color.
-      primaryColor: const Color(0xFF030303),
+      primaryColor: const Color(0xFF0E3E90),
       appBarTheme: AppBarTheme(
-        backgroundColor: colorScheme.background,
+        backgroundColor: colorScheme.primary,
         elevation: 0,
-        iconTheme: IconThemeData(color: colorScheme.primary),
+        iconTheme: IconThemeData(color: colorScheme.background),
       ),
       iconTheme: IconThemeData(color: colorScheme.onPrimary),
       canvasColor: colorScheme.background,
       scaffoldBackgroundColor: colorScheme.background,
       highlightColor: Colors.transparent,
       focusColor: focusColor,
+      elevatedButtonTheme: ElevatedButtonThemeData(
+        style: ButtonStyle(
+          backgroundColor:
+              MaterialStateProperty.all<Color>(colorScheme.secondary),
+        ),
+      ),
+      textButtonTheme: TextButtonThemeData(
+          style: ButtonStyle(
+        backgroundColor:
+            MaterialStateProperty.all<Color>(colorScheme.onBackground),
+      )),
       snackBarTheme: SnackBarThemeData(
         behavior: SnackBarBehavior.floating,
         backgroundColor: Color.alphaBlend(
@@ -41,12 +52,12 @@ class AppThemeData {
 
   static const ColorScheme lightColorScheme = ColorScheme(
     primary: Color(0xFFd21e1d),
-    primaryContainer: Color(0xFF9e1718),
-    secondary: Color(0xFFEFF3F3),
-    secondaryContainer: Color(0xFFFAFBFB),
-    background: Color(0xFFE6EBEB),
+    primaryContainer: Color(0xFFd21e1d),
+    secondary: Color(0xFF259AE0),
+    secondaryContainer: Color(0xFF259AE0),
+    background: Color(0xffFCFCFC),
     surface: Color(0xFFFAFBFB),
-    onBackground: Colors.white,
+    onBackground: Color(0xffFCFCFC),
     error: _lightFillColor,
     onError: _lightFillColor,
     onPrimary: _lightFillColor,

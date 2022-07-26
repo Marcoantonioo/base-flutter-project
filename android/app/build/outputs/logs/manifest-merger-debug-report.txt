@@ -43,7 +43,7 @@ INJECTED from C:\Users\Marco\Documents\projects\base_flutter_project\android\app
 INJECTED from C:\Users\Marco\Documents\projects\base_flutter_project\android\app\src\debug\AndroidManifest.xml:1:1-7:12
 INJECTED from C:\Users\Marco\Documents\projects\base_flutter_project\android\app\src\debug\AndroidManifest.xml:1:1-7:12
 	package
-		ADDED from C:\Users\Marco\Documents\projects\base_flutter_project\android\app\src\main\AndroidManifest.xml:2:5-47
+		ADDED from C:\Users\Marco\Documents\projects\base_flutter_project\android\app\src\main\AndroidManifest.xml:2:5-33
 		INJECTED from C:\Users\Marco\Documents\projects\base_flutter_project\android\app\src\main\AndroidManifest.xml
 		INJECTED from C:\Users\Marco\Documents\projects\base_flutter_project\android\app\src\debug\AndroidManifest.xml
 	android:versionName
@@ -83,10 +83,10 @@ MERGED from [androidx.versionedparcelable:versionedparcelable:1.1.1] C:\Users\Ma
 	android:appComponentFactory
 		ADDED from [androidx.core:core:1.6.0] C:\Users\Marco\.gradle\caches\transforms-2\files-2.1\b781330f13e915c5e33e9edfc19100b1\core-1.6.0\AndroidManifest.xml:24:18-86
 	android:label
-		ADDED from C:\Users\Marco\Documents\projects\base_flutter_project\android\app\src\main\AndroidManifest.xml:4:9-45
+		ADDED from C:\Users\Marco\Documents\projects\base_flutter_project\android\app\src\main\AndroidManifest.xml:4:9-31
 	android:icon
 		ADDED from C:\Users\Marco\Documents\projects\base_flutter_project\android\app\src\main\AndroidManifest.xml:5:9-43
-activity#com.example.base_flutter_project.MainActivity
+activity#com.example.cebras.MainActivity
 ADDED from C:\Users\Marco\Documents\projects\base_flutter_project\android\app\src\main\AndroidManifest.xml:6:9-34:20
 	android:launchMode
 		ADDED from C:\Users\Marco\Documents\projects\base_flutter_project\android\app\src\main\AndroidManifest.xml:8:13-43

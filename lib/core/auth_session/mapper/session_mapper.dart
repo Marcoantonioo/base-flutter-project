@@ -1,5 +1,5 @@
-import 'package:base_flutter_project/architecture/mapper/abstract_mapper.dart';
-import 'package:base_flutter_project/core/auth_session/model/session_model.dart';
+import 'package:cebras_app/architecture/mapper/abstract_mapper.dart';
+import 'package:cebras_app/core/auth_session/model/session_model.dart';
 
 class SessionMapper extends AbstractMapper<SessionModel> {
   @override

@@ -1,9 +1,9 @@
-import 'package:base_flutter_project/architecture/controller/controller.dart';
-import 'package:base_flutter_project/architecture/device_info/device_info.dart';
-import 'package:base_flutter_project/architecture/device_info/model/device_info_model.dart';
-import 'package:base_flutter_project/presentation/screens/login/login_event.dart';
-import 'package:base_flutter_project/presentation/screens/login/login_provider.dart';
-import 'package:base_flutter_project/presentation/screens/login/model/credential_model.dart';
+import 'package:cebras_app/architecture/controller/controller.dart';
+import 'package:cebras_app/architecture/device_info/device_info.dart';
+import 'package:cebras_app/architecture/device_info/model/device_info_model.dart';
+import 'package:cebras_app/presentation/screens/login/login_event.dart';
+import 'package:cebras_app/presentation/screens/login/login_provider.dart';
+import 'package:cebras_app/presentation/screens/login/model/credential_model.dart';
 import 'package:get/get.dart';
 
 class LoginController extends BaseController<LoginEvent> {

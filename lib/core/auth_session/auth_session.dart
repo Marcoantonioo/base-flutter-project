@@ -1,4 +1,4 @@
-import 'package:base_flutter_project/core/auth_session/model/session_model.dart';
+import 'package:cebras_app/core/auth_session/model/session_model.dart';
 
 abstract class AuthSession {
   Future<bool> get isLogged;

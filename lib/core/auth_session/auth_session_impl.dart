@@ -1,6 +1,6 @@
-import 'package:base_flutter_project/core/auth_session/auth_session.dart';
-import 'package:base_flutter_project/core/auth_session/mapper/session_mapper.dart';
-import 'package:base_flutter_project/core/auth_session/model/session_model.dart';
+import 'package:cebras_app/core/auth_session/auth_session.dart';
+import 'package:cebras_app/core/auth_session/mapper/session_mapper.dart';
+import 'package:cebras_app/core/auth_session/model/session_model.dart';
 import 'package:shared_preferences/shared_preferences.dart';
 
 class AuthSessionImpl implements AuthSession {

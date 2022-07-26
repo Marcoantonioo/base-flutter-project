@@ -1,4 +1,4 @@
-import 'package:base_flutter_project/architecture/injection/injector.dart';
+import 'package:cebras_app/architecture/injection/injector.dart';
 
 class CoreInjector extends Injector {
   @override

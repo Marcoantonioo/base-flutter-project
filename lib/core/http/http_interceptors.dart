@@ -1,9 +1,9 @@
 import 'dart:convert';
 import 'dart:developer';
 
-import 'package:base_flutter_project/core/auth_session/auth_session.dart';
-import 'package:base_flutter_project/core/auth_session/model/session_model.dart';
-import 'package:base_flutter_project/presentation/screens/login/login_provider.dart';
+import 'package:cebras_app/core/auth_session/auth_session.dart';
+import 'package:cebras_app/core/auth_session/model/session_model.dart';
+import 'package:cebras_app/presentation/screens/login/login_provider.dart';
 import 'package:dio/dio.dart';
 import 'package:get/get.dart' hide Response;
 

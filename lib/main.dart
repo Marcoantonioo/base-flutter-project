@@ -1,7 +1,7 @@
 import 'dart:async';
 import 'dart:developer';
 
-import 'package:base_flutter_project/components/app_state/app_state_component.dart';
+import 'package:cebras_app/components/app_state/app_state_component.dart';
 import 'package:flutter/material.dart';
 
 void main() {

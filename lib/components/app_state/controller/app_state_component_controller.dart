@@ -1,8 +1,8 @@
 import 'dart:developer';
 
-import 'package:base_flutter_project/architecture/controller/controller.dart';
-import 'package:base_flutter_project/components/app_state/event/app_state_component_event.dart';
-import 'package:base_flutter_project/components/app_state/provider/app_state_component_provider.dart';
+import 'package:cebras_app/architecture/controller/controller.dart';
+import 'package:cebras_app/components/app_state/event/app_state_component_event.dart';
+import 'package:cebras_app/components/app_state/provider/app_state_component_provider.dart';
 import 'package:flutter/cupertino.dart';
 
 /// Criado para lidar com os ciclo de vidas do aplicativo
