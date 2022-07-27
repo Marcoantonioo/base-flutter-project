@@ -6,6 +6,7 @@ import 'package:cebras_app/presentation/widgets/dismiss_keyboard_on_tap.dart';
 import 'package:cebras_app/presentation/widgets/password_text_field_widget.dart';
 import 'package:cebras_app/presentation/widgets/screen_view.dart';
 import 'package:cebras_app/presentation/widgets/text_field_widget.dart';
+import 'package:cebras_app/routes/route_name.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 
@@ -68,14 +69,19 @@ class LoginScreen extends ScreenView<LoginController> {
                       ),
                     ),
                     const SizedBox(height: 20),
-                    Align(
-                      alignment: Alignment.topRight,
-                      child: Text(
-                        'Esqueci minha senha',
-                        style: Theme.of(context)
-                            .textTheme
-                            .subtitle1
-                            ?.copyWith(color: const Color(0xff121429)),
+                    GestureDetector(
+                      onTap: () {
+                        Get.toNamed(RouteName.forgotPassword);
+                      },
+                      child: Align(
+                        alignment: Alignment.topRight,
+                        child: Text(
+                          'Esqueci minha senha',
+                          style: Theme.of(context)
+                              .textTheme
+                              .subtitle1
+                              ?.copyWith(color: const Color(0xff121429)),
+                        ),
                       ),
                     ),
                     const SizedBox(height: 50),

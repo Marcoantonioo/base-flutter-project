@@ -1,3 +1,5 @@
+import 'package:cebras_app/presentation/screens/forgot_password/forgot_password_injector.dart';
+import 'package:cebras_app/presentation/screens/forgot_password/forgot_password_screen.dart';
 import 'package:cebras_app/presentation/screens/login/login_injector.dart';
 import 'package:cebras_app/presentation/screens/login/login_screen.dart';
 import 'package:cebras_app/presentation/screens/splash/splash_injector.dart';
@@ -14,5 +16,12 @@ final List<GetPage> routes = [
     name: RouteName.splash,
     page: () => const SplashScreen(),
     binding: SplashInjector(),
+  ),
+  GetPage(
+    name: RouteName.forgotPassword,
+    page: () => const ForgotPasswordScreen(),
+    binding: ForgotPasswordInjector(),
+    transition: Transition.rightToLeft,
+    transitionDuration: const Duration(milliseconds: 200)
   ),
 ];
