@@ -3,6 +3,7 @@ import 'package:cebras_app/architecture/utils/validators.dart';
 import 'package:cebras_app/presentation/screens/login/login_event.dart';
 import 'package:cebras_app/presentation/screens/login/login_provider.dart';
 import 'package:cebras_app/presentation/screens/login/model/credential_model.dart';
+import 'package:cebras_app/routes/route_name.dart';
 import 'package:get/get.dart';
 
 class LoginController extends BaseController<LoginEvent> {
@@ -31,12 +32,13 @@ class LoginController extends BaseController<LoginEvent> {
   }
 
   Future<void> _handleLogin() async {
-    if (isValid()) {
-      doOnlineAction(action: () async {
-        final res = await _provider.login(_buildEntity());
-        showSuccess(res);
-      });
-    }
+  //  if (isValid()) {
+      // doOnlineAction(action: () async {
+      //   final res = await _provider.login(_buildEntity());
+      //   popAndToNamed(RouteName.loginWelcome);
+      // });
+ //   }
+  popAndToNamed(RouteName.loginWelcome);
   }
 
   bool isValid() {

@@ -1,13 +1,13 @@
 import 'package:cebras_app/presentation/widgets/button_widget.dart';
 import 'package:flutter/material.dart';
 
-class StepPasswordWidget extends StatelessWidget {
+class GenericStepWidget extends StatelessWidget {
   final String title;
   final String buttonTitle;
   final void Function()? onTapButton;
   final Widget child;
   final bool isLoading;
-  const StepPasswordWidget({
+  const GenericStepWidget({
     Key? key,
     required this.title,
     required this.buttonTitle,

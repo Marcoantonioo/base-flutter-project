@@ -1,3 +1,4 @@
+import 'package:cebras_app/architecture/utils/images.dart';
 import 'package:cebras_app/architecture/utils/validators.dart';
 import 'package:cebras_app/presentation/screens/login/login_controller.dart';
 import 'package:cebras_app/presentation/screens/login/login_event.dart';
@@ -27,7 +28,10 @@ class LoginScreen extends ScreenView<LoginController> {
                 child: Column(
                   mainAxisAlignment: MainAxisAlignment.center,
                   children: [
-                    Image.asset('name'),
+                    Image.asset(
+                      Images.logo,
+                      height: MediaQuery.of(context).size.height / 6,
+                    ),
                     Text(
                       'CENTRO BRASILEIRO DE PESQUISA SOBRE\nRESULTADOS EM SAÚDE',
                       style: Theme.of(context)

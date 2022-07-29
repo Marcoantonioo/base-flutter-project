@@ -12,7 +12,7 @@ class ForgotPasswordStep1 extends StatelessWidget {
   Widget build(BuildContext context) {
     ForgotPasswordController controller = Get.find();
     return Obx(
-      () => StepPasswordWidget(
+      () => GenericStepWidget(
         title: 'Digite o seu e-mail para recuperar sua senha',
         buttonTitle: 'RECUPERAR SENHA',
         onTapButton: () {

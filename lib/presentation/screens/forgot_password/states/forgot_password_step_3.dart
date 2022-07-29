@@ -12,7 +12,7 @@ class ForgotPasswordStep3 extends StatelessWidget {
   Widget build(BuildContext context) {
     ForgotPasswordController controller = Get.find();
     return Obx(
-      () => StepPasswordWidget(
+      () => GenericStepWidget(
         title: 'Digite a sua nova senha',
         buttonTitle: 'ALTERAR SENHA',
         onTapButton: () {
