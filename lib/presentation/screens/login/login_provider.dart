@@ -14,8 +14,7 @@ class LoginProvider {
 
     await Future.delayed(const Duration(seconds: 2));
 
-    return "";
-    //throw RemoteException();
+    throw RemoteException();
   }
 
   Future<String> refreshToken() async {

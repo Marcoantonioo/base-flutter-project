@@ -6,6 +6,6 @@ class LoginInjector extends Injector {
   @override
   void dependencies() {
     put(LoginProvider(httpClient: find()));
-    put(LoginController(loginProvider: find()));
+    put(LoginController(loginProvider: find(), deviceInfo: find()));
   }
 }

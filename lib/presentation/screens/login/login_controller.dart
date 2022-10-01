@@ -1,22 +1,24 @@
 import 'package:cebras_app/architecture/controller/controller.dart';
-import 'package:cebras_app/architecture/utils/validators.dart';
+import 'package:cebras_app/architecture/device_info/device_info.dart';
+import 'package:cebras_app/architecture/device_info/model/device_info_model.dart';
 import 'package:cebras_app/presentation/screens/login/login_event.dart';
 import 'package:cebras_app/presentation/screens/login/login_provider.dart';
 import 'package:cebras_app/presentation/screens/login/model/credential_model.dart';
-import 'package:cebras_app/routes/route_name.dart';
 import 'package:get/get.dart';
 
 class LoginController extends BaseController<LoginEvent> {
   final LoginProvider _provider;
+  final DeviceInfo _deviceInfo;
 
   late RxString email;
-  late RxBool hasErrorEmail;
   late RxString password;
-  late RxBool hasErrorPassword;
+  late Rx<DeviceInfoModel> deviceInfo;
 
   LoginController({
     required LoginProvider loginProvider,
-  }) : _provider = loginProvider;
+    required DeviceInfo deviceInfo,
+  })  : _provider = loginProvider,
+        _deviceInfo = deviceInfo;
 
   @override
   void onInit() {
@@ -28,30 +30,22 @@ class LoginController extends BaseController<LoginEvent> {
   void handleEvents(LoginEvent? event) {
     if (event is DoLogin) {
       _handleLogin();
+    } else if (event is GetDeviceInfo) {
+      _handleGetDeviceInfo();
     }
   }
 
   Future<void> _handleLogin() async {
-  //  if (isValid()) {
-      // doOnlineAction(action: () async {
-      //   final res = await _provider.login(_buildEntity());
-      //   popAndToNamed(RouteName.loginWelcome);
-      // });
- //   }
-  popAndToNamed(RouteName.loginWelcome);
+    doOnlineAction(action: () async {
+      final res = await _provider.login(_buildEntity());
+      showSuccess(res);
+    });
   }
 
-  bool isValid() {
-    hasErrorEmail(false);
-    hasErrorPassword(false);
-    if (email.isEmpty || !Validator.isEmail(email.value)) {
-      hasErrorEmail(true);
-    }
-
-    if (password.isEmpty || password.value.length < 8) {
-      hasErrorPassword(true);
-    }
-    return hasErrorEmail.isFalse && hasErrorPassword.isFalse;
+  Future<void> _handleGetDeviceInfo() async {
+    //setStateLoading();
+    deviceInfo.value = await _deviceInfo.getDeviceInfo();
+    //setStateIdle();
   }
 
   CredentialModel _buildEntity() =>
@@ -60,8 +54,8 @@ class LoginController extends BaseController<LoginEvent> {
   void _handleOnInit() {
     email = "".obs;
     password = "".obs;
+    deviceInfo =
+        DeviceInfoModel(identifier: '', model: '', manufacturer: '').obs;
     dispatchEvent(GetDeviceInfo());
-    hasErrorEmail = false.obs;
-    hasErrorPassword = false.obs;
   }
 }

@@ -43,7 +43,7 @@ class AppStateComponent extends State<MyApp> with WidgetsBindingObserver {
       initialBinding: AppInjector(),
       debugShowCheckedModeBanner: false,
       getPages: routes,
-      initialRoute: RouteName.splash,
+      initialRoute: RouteName.login,
     );
   }
 }
